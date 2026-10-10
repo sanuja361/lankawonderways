@@ -1,0 +1,1170 @@
+/* ==========================================================================
+   Lanka Wanderways — tour page
+   Loaded after styles.css on tour pages. Uses the tokens in tokens.css only.
+   Sections follow the page order.
+   ========================================================================== */
+
+.site-nav__list a[aria-current="page"]::after { transform: scaleX(1); }
+
+.container--narrow { max-width: calc(var(--container-narrow) + 2 * var(--gutter)); }
+
+.tick-list svg,
+.fact__icon,
+.day__stay svg {
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ==========================================================================
+   1. Tour hero
+   ========================================================================== */
+.tour-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(38rem, 94vh, 62rem);
+  min-height: clamp(38rem, 94svh, 62rem);
+  overflow: hidden;
+  background: var(--color-ebony);
+  color: var(--color-on-dark);
+}
+.tour-hero__media,
+.tour-hero__scrim {
+  position: absolute;
+  inset: 0;
+}
+.tour-hero__media { z-index: -2; }
+.tour-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 55%;
+  animation: hero-settle var(--duration-kenburns) var(--ease-slow) both;
+}
+.tour-hero__scrim {
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    var(--color-scrim) 0%,
+    var(--color-scrim-faint) 30%,
+    var(--color-scrim-faint) 42%,
+    var(--color-scrim-strong) 100%
+  );
+}
+
+.tour-hero__content {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding: calc(var(--header-height) + var(--space-9)) var(--gutter) calc(var(--space-9) + var(--space-8));
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin: 0 0 var(--space-7);
+  padding: 0;
+  list-style: none;
+  color: var(--color-on-dark-soft);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: var(--space-3);
+}
+.breadcrumb a {
+  text-decoration: none;
+  text-underline-offset: 0.35em;
+}
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb [aria-current] { color: var(--color-on-dark); }
+
+.tour-hero__title {
+  max-width: 12ch;
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+}
+.tour-hero__title em {
+  display: block;
+  font-style: italic;
+}
+
+.tour-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5) 0;
+  margin-top: var(--space-7);
+}
+.tour-hero__meta > div {
+  padding-right: var(--space-7);
+}
+.tour-hero__meta > div + div {
+  padding-left: var(--space-7);
+  border-left: 1px solid var(--color-line-on-dark);
+}
+.tour-hero__meta dt {
+  color: var(--color-on-dark-soft);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.tour-hero__meta dd {
+  margin-top: var(--space-2);
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  line-height: var(--leading-snug);
+}
+.tour-hero__meta dd small {
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: var(--weight-light);
+}
+
+.tour-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+}
+
+@media (max-width: 639.98px) {
+  .tour-hero__meta > div { padding-right: var(--space-5); }
+  .tour-hero__meta > div + div { padding-left: var(--space-5); }
+  .tour-hero__actions .button { flex: 1 1 100%; }
+}
+
+/* ==========================================================================
+   2. Quick facts (overlaps the hero)
+   Lumen-style: one white rounded card. Each fact is a soft sand cell with
+   its icon in a white tile, like the Why cards on the home page.
+   ========================================================================== */
+.facts {
+  position: relative;
+  z-index: var(--z-base);
+  margin-top: calc(var(--space-8) * -1);
+}
+.facts__panel {
+  padding: var(--space-2);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+.facts__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+}
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: calc(var(--radius-card) - var(--space-2));
+  background: color-mix(in srgb, var(--color-sand) 55%, var(--color-surface));
+}
+.fact__tile {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--space-4);
+  border-radius: var(--radius-field);
+  background: var(--color-surface);
+  color: var(--color-ocean);
+}
+.fact__icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5;
+}
+.fact dt {
+  color: var(--color-ink-soft);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-medium);
+}
+.fact dd {
+  color: var(--color-ebony);
+  font-size: 1.125rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.fact dd small {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--color-ink-soft);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-regular);
+  letter-spacing: 0;
+}
+
+@media (min-width: 640px) {
+  .facts__panel { padding: var(--space-3); }
+  .facts__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fact {
+    padding: var(--space-5);
+    border-radius: calc(var(--radius-card) - var(--space-3));
+  }
+}
+@media (min-width: 1240px) {
+  .facts { margin-top: calc(var(--space-9) * -1); }
+  .facts__list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+/* ==========================================================================
+   3. Overview
+   ========================================================================== */
+.overview__grid {
+  display: grid;
+  gap: var(--space-7);
+}
+.overview__head .chip { margin-bottom: var(--space-5); }
+.overview__statement {
+  max-width: 30ch;
+  color: var(--color-ocean);
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  line-height: 1.32;
+  text-wrap: pretty;
+}
+.overview__text {
+  max-width: 52ch;
+  margin-top: var(--space-6);
+  color: var(--color-ink-soft);
+}
+
+/* The main stops, in order, as numbered pills on a sand tray */
+.route-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-7) 0 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-card);
+  background: var(--color-sand);
+  list-style: none;
+  counter-reset: stop;
+}
+.route-line li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 16px 6px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-ebony);
+  font-size: 0.875rem;
+  font-weight: var(--weight-medium);
+  line-height: 1.35;
+}
+.route-line li::before {
+  counter-increment: stop;
+  content: counter(stop);
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-round);
+  background: var(--color-ocean);
+  color: var(--color-on-dark);
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 1024px) {
+  .overview__grid {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-10);
+    align-items: start;
+  }
+  .overview__body { padding-top: var(--space-8); }
+}
+
+/* ==========================================================================
+   4. Day-by-day itinerary
+   Lumen-style: a sand menu card with round day numbers, a sand day tile,
+   place pills and a sand "Tonight" card. Photos stay square-cornered.
+   ========================================================================== */
+.days { padding-bottom: var(--space-section); }
+.days > .container {
+  padding-top: var(--space-section);
+  background: linear-gradient(var(--color-line), var(--color-line)) top center / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+}
+.days .section-head .chip { margin-bottom: var(--space-5); }
+
+.days__layout {
+  display: grid;
+  gap: var(--space-7);
+}
+
+/* Day navigation: sticky card on desktop, sticky pill strip on smaller screens */
+.days-nav__heading {
+  color: var(--color-ink-soft);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-medium);
+}
+.days-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.days-nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+.days-nav__num {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-round);
+  background: var(--color-surface);
+  color: var(--color-ocean);
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+.days-nav__link[aria-current="true"] {
+  background: var(--color-ocean);
+  color: var(--color-on-dark);
+}
+.days-nav__link[aria-current="true"] .days-nav__num {
+  background: var(--color-glass);
+  color: var(--color-on-dark);
+}
+
+@media (hover: hover) {
+  .days-nav__link:not([aria-current="true"]):hover {
+    background: var(--color-surface);
+    color: var(--color-ebony);
+  }
+  .days-nav__link:not([aria-current="true"]):hover .days-nav__num { background: var(--color-sand); }
+}
+
+@media (min-width: 1024px) {
+  .days__layout {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: var(--space-9);
+    align-items: start;
+  }
+  .days-nav {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+    padding: var(--space-3);
+    border-radius: var(--radius-card);
+    background: var(--color-sand);
+  }
+  .days-nav__heading { padding: var(--space-2) var(--space-3) var(--space-3); }
+  .days-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .days-nav__link {
+    min-height: 48px;
+    padding: var(--space-2) var(--space-3) var(--space-2) var(--space-2);
+    border-radius: var(--radius-field);
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .days-nav {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 5;
+    margin-inline: calc(var(--gutter) * -1);
+    overflow-x: auto;
+    background: var(--color-coconut);
+    border-bottom: var(--border-hairline);
+    scrollbar-width: none;
+  }
+  .days-nav::-webkit-scrollbar { display: none; }
+  .days-nav__heading { display: none; }
+  .days-nav__list {
+    display: flex;
+    gap: var(--space-2);
+    width: max-content;
+    padding: var(--space-3) var(--gutter);
+  }
+  .days-nav__link {
+    gap: var(--space-2);
+    padding: 6px 16px 6px 6px;
+    border-radius: var(--radius-pill);
+    background: var(--color-sand);
+    white-space: nowrap;
+  }
+}
+
+/* One day */
+.day {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-block: var(--space-9);
+  border-top: 1px dashed var(--color-line-strong);
+}
+.day:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.day:last-child { padding-bottom: 0; }
+
+/* "Day 01": a sand pill on phones, a sand tile beside the day on wider screens */
+.day__num {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--color-sand);
+  color: var(--color-ocean);
+  font-size: 0.875rem;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+}
+.day__num-label {
+  color: var(--color-ink-soft);
+  font-weight: var(--weight-medium);
+}
+.day__title {
+  color: var(--color-ocean);
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+.day__places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.day__places li {
+  padding: 5px 12px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-medium);
+  line-height: 1.35;
+}
+
+.day__body {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+.day__text { max-width: 56ch; }
+
+.day__stay {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: calc(var(--radius-card) - var(--space-1));
+  background: var(--color-sand);
+}
+.day__stay-tile {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-field);
+  background: var(--color-surface);
+  color: var(--color-ocean);
+}
+.day__stay svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5;
+}
+.day__stay p {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.day__stay-label {
+  color: var(--color-ink-soft);
+  font-size: 0.75rem;
+  font-weight: var(--weight-medium);
+}
+.day__stay-name {
+  color: var(--color-ebony);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  line-height: 1.3;
+  text-decoration: none;
+}
+a.day__stay-name:hover {
+  color: var(--color-ocean);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+.day__stay-place {
+  color: var(--color-ink-soft);
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 768px) {
+  .day {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    column-gap: var(--space-6);
+  }
+  .day__num {
+    grid-row: 1 / span 3;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-1);
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: var(--radius-card);
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .day__num-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+  .day__body {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: var(--space-6);
+    align-items: start;
+  }
+}
+
+/* Photo groups: a different arrangement for each day */
+.day__photos {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+}
+.day__photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-sand);
+}
+.day__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.8s var(--ease-slow);
+}
+@media (hover: hover) {
+  .day__photo:hover img { transform: scale(1.03); }
+}
+.day__photos > :first-child:nth-last-child(3) { grid-column: 1 / -1; }
+
+@media (min-width: 768px) {
+  .day__photos {
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+  .day__photos > :first-child:nth-last-child(3) { grid-column: auto; }
+
+  /* Two photos, the second dropped lower */
+  .day__photos--offset {
+    grid-template-columns: 7fr 5fr;
+    align-items: start;
+  }
+  .day__photos--offset > :last-child {
+    aspect-ratio: 4 / 5;
+    margin-top: var(--space-9);
+  }
+
+  /* One large photo beside two small ones */
+  .day__photos--feature { grid-template-columns: 2fr 1fr; }
+  .day__photos--feature-rev { grid-template-columns: 1fr 2fr; }
+  .day__photos--feature > :first-child,
+  .day__photos--feature-rev > :first-child {
+    grid-row: 1 / span 2;
+    aspect-ratio: auto;
+  }
+  .day__photos--feature-rev > :first-child { grid-column: 2; }
+  .day__photos--feature > :first-child img,
+  .day__photos--feature-rev > :first-child img {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* A large photo with a smaller one overlapping its corner */
+  .day__photos--overlap,
+  .day__photos--overlap-rev {
+    display: block;
+    position: relative;
+    padding-bottom: var(--space-9);
+  }
+  .day__photos--overlap > :first-child,
+  .day__photos--overlap-rev > :first-child { width: 80%; }
+  .day__photos--overlap-rev > :first-child { margin-left: auto; }
+  .day__photos--overlap > :last-child,
+  .day__photos--overlap-rev > :last-child {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    aspect-ratio: 4 / 5;
+    border: var(--space-2) solid var(--color-coconut);
+    box-shadow: var(--shadow-soft);
+  }
+  .day__photos--overlap > :last-child { right: 0; }
+  .day__photos--overlap-rev > :last-child { left: 0; }
+
+  /* Three tall photos, staggered */
+  .day__photos--trio {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+  .day__photos--trio > * { aspect-ratio: 3 / 4; }
+  .day__photos--trio > :nth-child(2) { margin-top: var(--space-8); }
+  .day__photos--trio > :nth-child(3) { margin-top: var(--space-5); }
+
+  /* A wide cinematic frame with a smaller photo laid over it */
+  .day__photos--cinema { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .day__photos--cinema > :first-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 21 / 9;
+  }
+  .day__photos--cinema > :first-child img { object-position: 50% 45%; }
+  .day__photos--cinema > :last-child {
+    grid-column: 8 / -1;
+    margin-top: calc(var(--space-9) * -1);
+    border: var(--space-2) solid var(--color-coconut);
+    box-shadow: var(--shadow-soft);
+  }
+}
+
+/* ==========================================================================
+   5. Hotels on this tour (carousel)
+   Lumen-style: white rounded cards on sand. The photo box sits inset and
+   stays square-cornered.
+   ========================================================================== */
+.hotels { background: var(--color-sand); }
+.hotels .section-head { margin-bottom: var(--space-8); }
+.hotels__head .chip { margin-bottom: var(--space-5); }
+
+.carousel__controls {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+@media (min-width: 768px) {
+  .hotels__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-7);
+  }
+  .hotels__head .carousel__controls { margin-top: 0; }
+}
+.icon-button--ink {
+  border-color: transparent;
+  background: var(--color-surface);
+  color: var(--color-ocean);
+  box-shadow: var(--shadow-button);
+}
+.icon-button--ink:hover {
+  background: var(--color-ocean);
+  border-color: var(--color-ocean);
+  color: var(--color-coconut);
+}
+.icon-button[aria-disabled="true"] {
+  opacity: 0.4;
+  box-shadow: none;
+  cursor: default;
+}
+.icon-button--ink[aria-disabled="true"]:hover {
+  background: var(--color-surface);
+  border-color: transparent;
+  color: var(--color-ocean);
+}
+
+.carousel__track {
+  --carousel-pad: max(var(--gutter), calc((100% - var(--container)) / 2));
+  display: flex;
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-2) var(--carousel-pad) var(--space-7);
+  overflow-x: auto;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--carousel-pad);
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__track:focus-visible { outline-offset: -2px; }
+
+.hotel-card {
+  display: flex;
+  flex: 0 0 clamp(16.5rem, 26vw, 22rem);
+  flex-direction: column;
+  padding: var(--space-3);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  scroll-snap-align: start;
+  transition:
+    translate var(--duration-base) var(--ease-slow),
+    box-shadow var(--duration-base) var(--ease-standard);
+}
+@media (hover: hover) {
+  .hotel-card:hover {
+    translate: 0 -4px;
+    box-shadow: var(--shadow-card);
+  }
+}
+/* Area photo until the official hotel photos arrive. Square corners. */
+.hotel-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-sand);
+}
+.hotel-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-slow);
+}
+@media (hover: hover) {
+  .hotel-card:hover .hotel-card__media img { transform: scale(1.05); }
+}
+.hotel-card__media .chip {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-3);
+  margin: 0;
+}
+
+.hotel-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-5) var(--space-3) var(--space-3);
+}
+.hotel-card__nights {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-sand);
+  color: var(--color-ebony);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-medium);
+  line-height: 1.35;
+}
+.hotel-card__nights::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-round);
+  background: var(--color-spice-deep);
+}
+.hotel-card__name {
+  margin-top: var(--space-4);
+  color: var(--color-ebony);
+  font-family: var(--font-sans);
+  font-size: 1.1875rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.hotel-card__place {
+  margin: var(--space-1) 0 var(--space-5);
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+}
+.hotel-card__text {
+  align-self: stretch;
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-line-strong);
+  color: var(--color-ink-soft);
+  font-size: var(--text-small);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. Included / not included
+   Lumen-style: two rounded cards, ocean and sand, with each tick or cross
+   in a round tile.
+   ========================================================================== */
+.inclusions { padding-block: var(--space-section); }
+.inclusions__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+.inclusions__panel {
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  border-radius: var(--radius-card);
+}
+.inclusions__panel--in {
+  background: var(--color-ocean);
+  color: var(--color-on-dark);
+}
+.inclusions__panel--out { background: var(--color-sand); }
+.inclusions .chip { margin-bottom: var(--space-5); }
+.inclusions .section-title { max-width: none; }
+
+.tick-list {
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.tick-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  line-height: 1.5;
+}
+.tick-list li + li { border-top: 1px dashed var(--color-line-strong); }
+.tick-list__tile {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-block: -6px;
+  border-radius: var(--radius-round);
+}
+.tick-list svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+.tick-list--light li + li { border-top-color: var(--color-line-on-dark); }
+.tick-list--light .tick-list__tile {
+  background: var(--color-glass);
+  box-shadow: inset 0 0 0 1px var(--color-glass-line);
+  color: var(--color-on-dark);
+}
+.tick-list--out { color: var(--color-ink); }
+.tick-list--out .tick-list__tile {
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
+}
+
+.inclusions__note {
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-field);
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
+  font-size: var(--text-small);
+}
+
+@media (min-width: 1024px) {
+  .inclusions__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+}
+
+/* ==========================================================================
+   7. Route map
+   The map keeps square corners, like the photos. The day list is a stack
+   of small white rounded rows.
+   ========================================================================== */
+.route { background: var(--color-sand); }
+.route__grid {
+  display: grid;
+  gap: var(--space-8);
+}
+.route__text .chip { margin-bottom: var(--space-5); }
+
+.route__map {
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-surface);
+}
+.route__map svg {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  height: auto;
+  margin-inline: auto;
+}
+.map__land {
+  fill: var(--color-sand);
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+.map__line {
+  fill: none;
+  stroke: var(--color-ocean);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.map__line--road { stroke-width: 2; }
+.map__line--train {
+  stroke-width: 3;
+  stroke-dasharray: 0 7;
+}
+.map__line--return {
+  stroke-width: 1.5;
+  stroke-dasharray: 7 6;
+}
+.map__line--spur {
+  stroke-width: 2.5;
+  stroke-dasharray: 0 6;
+}
+.map__stop {
+  fill: var(--color-surface);
+  stroke: var(--color-ocean);
+  stroke-width: 1.5;
+}
+.map__stop--night { fill: var(--color-ocean); }
+.map__label {
+  fill: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.12em;
+}
+.map__sea {
+  fill: var(--color-ink-soft);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-style: italic;
+}
+
+/* The road lines draw in slowly when the map comes into view */
+.js .route__map.reveal .map__line--road {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 3.2s var(--ease-slow) 0.4s;
+}
+.js .route__map.reveal .map__line:not(.map__line--road) {
+  opacity: 0;
+  transition: opacity var(--duration-reveal) var(--ease-slow) 2s;
+}
+.js .route__map.is-visible .map__line--road { stroke-dashoffset: 0; }
+.js .route__map.is-visible .map__line:not(.map__line--road) { opacity: 1; }
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-5) 0 0;
+  padding: var(--space-4) 0 0;
+  border-top: 1px dashed var(--color-line-strong);
+  list-style: none;
+}
+.map-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 5px 12px 5px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-coconut);
+  box-shadow: inset 0 0 0 1px var(--color-line);
+  color: var(--color-ink-soft);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-medium);
+  line-height: 1.35;
+}
+.map-legend svg {
+  width: 28px;
+  height: 12px;
+  flex: none;
+}
+.route__note {
+  margin-top: var(--space-4);
+  color: var(--color-ink-soft);
+  font-size: var(--text-micro);
+  text-align: center;
+}
+
+.route-days {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.route-days li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 52px;
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
+  border-radius: var(--radius-field);
+  background: var(--color-surface);
+  color: var(--color-ebony);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+.route-days__day {
+  flex: none;
+  min-width: 4.25rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-sand);
+  color: var(--color-ocean);
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .route__grid {
+    grid-template-columns: 7fr 5fr;
+    gap: var(--space-10);
+    align-items: center;
+  }
+  .route__map {
+    order: -1;
+    padding: var(--space-8) var(--space-7) var(--space-6);
+  }
+}
+
+/* ==========================================================================
+   8. Tour FAQ (centred, narrow)
+   ========================================================================== */
+.tour-faq__head {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+.tour-faq__head .chip { margin-bottom: var(--space-5); }
+.tour-faq__head .section-title { margin-inline: auto; }
+.tour-faq__head .lead { margin-inline: auto; }
+.tour-faq__more {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+/* ==========================================================================
+   10. Final WhatsApp call to action (full-bleed)
+   ========================================================================== */
+.cta-band {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: clamp(32rem, 84vh, 54rem);
+  padding-block: var(--space-section);
+  overflow: hidden;
+  background: var(--color-ebony);
+  color: var(--color-on-dark);
+  text-align: center;
+}
+.cta-band__media,
+.cta-band__scrim {
+  position: absolute;
+  inset: 0;
+}
+.cta-band__media { z-index: -2; }
+.cta-band__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cta-band__scrim {
+  z-index: -1;
+  background: var(--color-scrim);
+}
+.cta-band .chip { margin-bottom: var(--space-5); }
+.cta-band .section-title {
+  max-width: 14ch;
+  margin-inline: auto;
+}
+.cta-band__lead {
+  max-width: 40ch;
+  margin: var(--space-6) auto 0;
+  color: var(--color-on-dark);
+  font-size: var(--text-lead);
+  line-height: 1.6;
+}
+.cta-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 639.98px) {
+  .cta-band__actions .button { flex: 1 1 100%; }
+}
+
+/* ==========================================================================
+   Motion
+   ========================================================================== */
+@keyframes hero-settle {
+  from { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-hero__media img { animation: none; }
+  .day__photo img,
+  .hotel-card,
+  .hotel-card__media img,
+  .days-nav__link,
+  .days-nav__num { transition: none; }
+  .day__photo:hover img { transform: none; }
+  .hotel-card:hover { translate: none; }
+  .hotel-card:hover .hotel-card__media img { transform: none; }
+  .js .route__map.reveal .map__line--road {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+  .js .route__map.reveal .map__line:not(.map__line--road) {
+    opacity: 1;
+    transition: none;
+  }
+}

@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Lanka Wanderways — design tokens
+   Every colour, type, spacing, radius, shadow and motion value lives here.
+   styles.css references these tokens only.
+   ========================================================================== */
+
+:root {
+  /* ---- Colour: brand palette ---- */
+  --color-coconut: #FFFDF8;      /* main background */
+  --color-sand: #F7EDDC;         /* alternate sections */
+  --color-ebony: #1E2A2F;        /* body text, dark sections */
+  --color-ocean: #0B4F6C;        /* headings, header, brand moments */
+  --color-spice: #F2A541;        /* CTA buttons, small highlights only */
+  --color-tea: #2E8B57;          /* tags and icons, sparingly */
+
+  /* ---- Colour: derived (contrast-checked) ---- */
+  --color-ocean-deep: #083A50;   /* hover / pressed on ocean */
+  --color-spice-deep: #E08F22;   /* hover on spice buttons */
+  --color-tea-ink: #1F6B43;      /* tea green for small text, 5.6:1 on sand */
+  --color-ink: var(--color-ebony);
+  --color-ink-soft: #4B575C;     /* secondary text, 7.4:1 on coconut */
+  --color-ink-faint: #6B7579;    /* captions on light, 4.6:1 on coconut */
+  --color-on-dark: var(--color-coconut);
+  --color-on-dark-soft: rgba(255, 253, 248, 0.78);
+  --color-line: rgba(30, 42, 47, 0.14);        /* hairline rules on light */
+  --color-line-strong: rgba(30, 42, 47, 0.32);
+  --color-line-on-dark: rgba(255, 253, 248, 0.24);
+  --color-scrim-faint: rgba(14, 22, 26, 0.18); /* photo overlay */
+  --color-scrim: rgba(14, 22, 26, 0.55);
+  --color-scrim-strong: rgba(14, 22, 26, 0.72);
+  --color-surface: #FFFFFF;                    /* cards that sit on sand */
+  --color-tea-tint: rgba(46, 139, 87, 0.11);   /* status chip background */
+  --color-glass: rgba(255, 253, 248, 0.14);    /* chips and buttons over photos */
+  --color-glass-line: rgba(255, 253, 248, 0.34);
+  --color-placeholder-bg: #FFF1D6;             /* [ADD] placeholders */
+  --color-placeholder-line: #C77A12;
+  --color-focus: var(--color-spice);
+  --color-error: #A3341F;
+  --color-error-tint: rgba(163, 52, 31, 0.12);  /* invalid field halo */
+  --color-ocean-tint: rgba(11, 79, 108, 0.14);  /* focused field halo */
+  --color-field: #FBF7EF;                       /* form field fill */
+
+  /* ---- Typography ---- */
+  --font-serif: "Playfair Display", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --text-display: clamp(3rem, 7.4vw, 7.25rem);  /* hero headline */
+  --text-h2: clamp(2.4rem, 4.8vw, 4.5rem);      /* section titles */
+  --text-h3: clamp(1.6rem, 2.4vw, 2.25rem);     /* sub titles, quotes */
+  --text-h4: 1.375rem;                          /* card titles */
+  --text-lead: clamp(1.125rem, 1.4vw, 1.3rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.9375rem;
+  --text-label: 0.75rem;                        /* uppercase labels, nav */
+  --text-micro: 0.6875rem;
+
+  --leading-tight: 1.04;
+  --leading-snug: 1.2;
+  --leading-body: 1.7;
+
+  --tracking-display: -0.015em;
+  --tracking-label: 0.22em;
+  --tracking-button: 0.24em;
+
+  /* ---- Spacing (4px base) ---- */
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 3rem;      /* 48 */
+  --space-8: 4rem;      /* 64 */
+  --space-9: 6rem;      /* 96 */
+  --space-10: 8rem;     /* 128 */
+  --space-11: 12rem;    /* 192 */
+  --space-section: clamp(6rem, 13vw, 12rem);
+
+  /* ---- Layout ---- */
+  --container: 1280px;
+  --container-narrow: 760px;
+  --gutter: clamp(1rem, 4vw, 4rem);             /* 16px on phones */
+  --header-height: 84px;
+
+  /* ---- Radii ----
+     Photos and sections stay sharp. Buttons, form fields and cards use
+     the softer Lumen-style shapes below. */
+  --radius-none: 0;
+  --radius-round: 50%;
+  --radius-pill: 999px;          /* buttons, chips, filters */
+  --radius-field: 12px;          /* form inputs, icon tiles */
+  --radius-card: 24px;           /* form, contact and reason cards (photos stay square) */
+
+  /* ---- Borders ---- */
+  --border-hairline: 1px solid var(--color-line);
+  --border-hairline-strong: 1px solid var(--color-line-strong);
+  --border-hairline-dark: 1px solid var(--color-line-on-dark);
+
+  /* ---- Shadows ---- */
+  --shadow-soft: 0 30px 60px -40px rgba(30, 42, 47, 0.45);
+  --shadow-float: 0 18px 40px -18px rgba(11, 79, 108, 0.55);
+  --shadow-button: 0 10px 24px -14px rgba(30, 42, 47, 0.55);
+  --shadow-card: 0 1px 2px rgba(30, 42, 47, 0.04), 0 40px 80px -50px rgba(11, 79, 108, 0.45);
+
+  /* ---- Motion ---- */
+  --ease-slow: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 240ms;
+  --duration-base: 500ms;
+  --duration-reveal: 1400ms;
+  --duration-crossfade: 2200ms;
+  --duration-kenburns: 16s;
+  --duration-slide: 7s;          /* time each hero photo stays on screen */
+  --duration-stagger: 140ms;     /* delay between items revealing together */
+
+  /* ---- Icons ---- */
+  --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B4F6C' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F6B43' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+
+  /* ---- Layers ---- */
+  --z-base: 1;
+  --z-header: 50;
+  --z-menu: 60;
+  --z-float: 70;
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --header-height: 68px;
+  }
+}

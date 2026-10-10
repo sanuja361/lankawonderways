@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lanka Wanderways — Private Sri Lanka tours, planned by locals</title>
+  <meta name="description" content="Private Sri Lanka tours with your own English-speaking driver-guide. Tailor-made routes, no hidden costs, no booking fee and free cancellation up to 30 days before arrival.">
+  <meta name="theme-color" content="#0B4F6C">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="logo" href="#top" aria-label="Lanka Wanderways, home">Lanka Wanderways</a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="sri-lanka-highlights.html">Sri Lanka Highlights</a></li>
+        </ul>
+        <a class="button button--spice site-nav__cta" href="#plan">Plan My Trip<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+      </nav>
+
+      <a class="button button--outline button--sm site-header__cta" href="#plan">Plan My Trip<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero" aria-label="Introduction" data-hero>
+      <div class="hero__slides">
+        <figure class="hero__slide is-active" data-caption="Sigiriya at dawn">
+          <img src="assets/images/hero-sigiriya-dawn.jpg" alt="Sigiriya Rock rising out of misty forest at dawn" width="2400" height="1500" fetchpriority="high">
+        </figure>
+        <figure class="hero__slide" data-caption="Pidurangala, before sunrise">
+          <img src="assets/images/hero-pidurangala-mist.jpg" alt="A traveller standing on Pidurangala Rock above a sea of morning mist" width="2400" height="1500" loading="lazy">
+        </figure>
+        <figure class="hero__slide" data-caption="Tea country, golden hour">
+          <img src="assets/images/hero-tea-golden-hour.jpg" alt="Sun shining through tall trees over rows of tea bushes in the hill country" width="2400" height="1500" loading="lazy">
+        </figure>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--light reveal">Private tours &middot; Sri Lanka</p>
+        <h1 class="hero__title reveal">Sri Lanka, <em>planned by locals.</em></h1>
+        <p class="hero__lead reveal">Private tours with your own driver-guide, built around you.</p>
+        <div class="hero__actions reveal">
+          <a class="button button--spice" href="https://wa.me/94729879869" target="_blank" rel="noopener">Get My Free Itinerary<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+          <a class="button button--outline-light" href="#tours">View Tour Packages<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+        </div>
+        <ul class="trust-line reveal" aria-label="Our promises">
+          <li>Free custom itinerary</li>
+          <li>No booking fee</li>
+          <li>Free cancellation up to 30 days before arrival</li>
+        </ul>
+      </div>
+
+      <div class="hero__footer">
+        <p class="hero__caption" aria-live="polite"><span data-hero-caption>Sigiriya at dawn</span></p>
+        <div class="hero__progress" aria-hidden="true">
+          <span class="hero__bar is-active"></span><span class="hero__bar"></span><span class="hero__bar"></span>
+        </div>
+        <button class="hero__pause" type="button" data-hero-pause aria-pressed="false">Pause slideshow</button>
+      </div>
+    </section>
+
+    <!-- ===== 2. Tour packages ===== -->
+    <section class="section tours" id="tours" aria-labelledby="tours-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="chip reveal">Tour packages</p>
+            <h2 class="section-title reveal" id="tours-title">Ten ways to <em>see the island.</em></h2>
+          </div>
+          <div class="section-head__aside reveal">
+            <p class="lead">Start with a route you like, then make it yours. Prices are "from" prices per person.</p>
+            <p class="demo-note">Sample prices shown for demo purposes.</p>
+          </div>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filter tours by interest" data-filters>
+          <button type="button" class="filter is-active" aria-pressed="true" data-filter="all">All</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="beaches">Beaches</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="tea-country">Tea Country</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="wildlife">Wildlife</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="adventure">Adventure</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="hiking">Hiking</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="kitesurfing">Kitesurfing</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="historical">Historical</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="honeymoon">Honeymoon</button>
+        </div>
+        <p class="visually-hidden" aria-live="polite" data-filter-status></p>
+
+        <div class="tour-grid" data-tour-grid>
+
+          <article class="tour-card tour-card--feature" data-tags="historical tea-country wildlife beaches">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-highlights.jpg" alt="Sunlight falling on a blue train as it curves across Nine Arches Bridge" width="1000" height="1250" loading="lazy">
+              <span class="badge">Most Popular</span>
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 1,190</strong> per person</p><p class="tour-card__meta">8 Days / 7 Nights</p></div>
+              <h3 class="tour-card__title">Sri Lanka Highlights</h3>
+              <p class="tour-card__desc">Sigiriya, Kandy, tea country, Ella, Yala safari and Galle in one trip.</p>
+              <ul class="tags" aria-label="Interests"><li>Historical</li><li>Tea Country</li><li>Wildlife</li><li>Beaches</li></ul>
+              <a class="button button--spice tour-card__cta" href="sri-lanka-highlights.html">View Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="beaches">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-southern-beaches.jpg" alt="A fisherman wading through the surf at sunset on the south coast" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 700</strong> per person</p><p class="tour-card__meta">6 Days / 5 Nights</p></div>
+              <h3 class="tour-card__title">Southern Beaches Escape</h3>
+              <p class="tour-card__desc">Bentota, Galle Fort, Unawatuna and Mirissa, with whale watching in season (Nov–Apr).</p>
+              <ul class="tags" aria-label="Interests"><li>Beaches</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=southern-beaches-escape#plan" data-package="southern-beaches-escape">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="tea-country">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-tea-country.jpg" alt="Aerial view of neat tea rows and a red dirt road winding over green hills" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 650</strong> per person</p><p class="tour-card__meta">5 Days / 4 Nights</p></div>
+              <h3 class="tour-card__title">Tea Country Trails</h3>
+              <p class="tour-card__desc">Kandy, Nuwara Eliya, tea factory visit, tea plucking and Horton Plains.</p>
+              <ul class="tags" aria-label="Interests"><li>Tea Country</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=tea-country-trails#plan" data-package="tea-country-trails">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="tea-country hiking">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-ella.jpg" alt="A traveller sitting on a rock looking out at misty green mountains near Ella" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 550</strong> per person</p><p class="tour-card__meta">4 Days / 3 Nights</p></div>
+              <h3 class="tour-card__title">Ella &amp; Hill Country</h3>
+              <p class="tour-card__desc">Scenic Kandy–Ella train, Nine Arches Bridge, Little Adam's Peak and Ravana Falls.</p>
+              <ul class="tags" aria-label="Interests"><li>Tea Country</li><li>Hiking</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=ella-hill-country#plan" data-package="ella-hill-country">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="wildlife">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-wildlife.jpg" alt="A leopard drinking at a waterhole" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 900</strong> per person</p><p class="tour-card__meta">6 Days / 5 Nights</p></div>
+              <h3 class="tour-card__title">Wildlife Safari Adventure</h3>
+              <p class="tour-card__desc">Elephants at Minneriya, Udawalawe and leopards in Yala.</p>
+              <ul class="tags" aria-label="Interests"><li>Wildlife</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=wildlife-safari-adventure#plan" data-package="wildlife-safari-adventure">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="adventure">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-adventure.jpg" alt="Four paddlers in a yellow raft on bright blue-green white water" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 950</strong> per person</p><p class="tour-card__meta">7 Days / 6 Nights</p></div>
+              <h3 class="tour-card__title">Adventure Sri Lanka</h3>
+              <p class="tour-card__desc">White-water rafting in Kitulgala, ziplining in Ella and jungle treks.</p>
+              <ul class="tags" aria-label="Interests"><li>Adventure</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=adventure-sri-lanka#plan" data-package="adventure-sri-lanka">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="hiking">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-hiking.jpg" alt="Prayer flags at the summit of Adam's Peak, with mountains glowing at sunrise" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 850</strong> per person</p><p class="tour-card__meta">7 Days / 6 Nights</p></div>
+              <h3 class="tour-card__title">Hiking &amp; Trekking</h3>
+              <p class="tour-card__desc">Knuckles Range, Adam's Peak sunrise, Horton Plains and Ella Rock.</p>
+              <ul class="tags" aria-label="Interests"><li>Hiking</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=hiking-trekking#plan" data-package="hiking-trekking">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="kitesurfing beaches">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-kitesurfing.jpg" alt="Kites in the air over the sea at sunset" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 800</strong> per person</p><p class="tour-card__meta">7 Days / 6 Nights</p></div>
+              <h3 class="tour-card__title">Kitesurfing in Kalpitiya</h3>
+              <p class="tour-card__desc">Lagoon kitesurfing for beginners and riders, plus dolphin watching. Season: May–Oct and Dec–Mar.</p>
+              <ul class="tags" aria-label="Interests"><li>Kitesurfing</li><li>Beaches</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=kitesurfing-kalpitiya#plan" data-package="kitesurfing-kalpitiya">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-tags="historical">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-cultural-triangle.jpg" alt="An ancient stupa silhouetted against the sunset, reflected in still water" width="1000" height="1250" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 700</strong> per person</p><p class="tour-card__meta">5 Days / 4 Nights</p></div>
+              <h3 class="tour-card__title">Cultural Triangle Heritage</h3>
+              <p class="tour-card__desc">Anuradhapura, Polonnaruwa, Sigiriya Rock and Dambulla Cave Temple.</p>
+              <ul class="tags" aria-label="Interests"><li>Historical</li></ul>
+              <a class="button button--outline-light button--sm tour-card__cta" href="?package=cultural-triangle-heritage#plan" data-package="cultural-triangle-heritage">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+
+          <article class="tour-card tour-card--feature tour-card--reverse" data-tags="honeymoon beaches">
+            <figure class="tour-card__media">
+              <img src="assets/images/pkg-honeymoon.jpg" alt="A couple walking hand in hand along the shore as the sun sets" width="1000" height="1250" loading="lazy">
+              <span class="badge">For Couples</span>
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__chips"><p class="tour-card__price">From <strong>USD 1,450</strong> per person</p><p class="tour-card__meta">9 Days / 8 Nights</p></div>
+              <h3 class="tour-card__title">Honeymoon Escape</h3>
+              <p class="tour-card__desc">Romantic hill-country stays, a private safari and beach days on the south coast.</p>
+              <ul class="tags" aria-label="Interests"><li>Honeymoon</li><li>Beaches</li></ul>
+              <a class="button button--spice tour-card__cta" href="?package=honeymoon-escape#plan" data-package="honeymoon-escape">Enquire About This Tour<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tours__custom reveal">
+          <p class="tours__custom-text">Don't see what you want? <em>Every trip can be customised.</em></p>
+          <a class="button button--ocean" href="?package=custom#plan" data-package="custom">Plan My Custom Trip<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Why choose us ===== -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="why__head">
+          <div>
+            <p class="chip reveal">Why Lanka Wanderways</p>
+            <h2 class="section-title reveal" id="why-title">Like travelling with a friend <em>who lives here.</em></h2>
+          </div>
+          <p class="lead reveal">Your first trip to Sri Lanka should feel easy. Here is how we make sure it does.</p>
+        </header>
+
+        <div class="why__grid">
+          <div class="why__media reveal">
+            <figure class="why__photo why__photo--main">
+              <img src="assets/images/why-sigiriya-view.jpg" alt="Two travellers sitting on Pidurangala Rock, looking across the forest to Sigiriya" width="1200" height="1500" loading="lazy">
+            </figure>
+            <figure class="why__photo why__photo--inset">
+              <img src="assets/images/why-ella-gap.jpg" alt="Storm clouds over the steep green valley of Ella Gap" width="1200" height="1500" loading="lazy">
+            </figure>
+          </div>
+
+          <ol class="why__list">
+            <li class="why-card reveal">
+              <div class="why-card__top">
+                <span class="why-card__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4"/><path d="M3.3 10.2c3 .9 5.9.9 8.7.9s5.7 0 8.7-.9M9.8 13.3 7 20.2M14.2 13.3l2.8 6.9"/></svg></span>
+                <span class="why-card__num" aria-hidden="true">01</span>
+              </div>
+              <h3 class="why-card__title">Your own private driver-guide</h3>
+              <p>One friendly, English-speaking driver stays with you for the whole trip.</p>
+            </li>
+            <li class="why-card reveal">
+              <div class="why-card__top">
+                <span class="why-card__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="18.5" r="1.6"/><path d="M6.6 18.5h6.9a3 3 0 0 0 0-6h-3a3 3 0 0 1 0-6h4.8"/><path d="M19 11.2c-1.9-2.1-2.9-3.7-2.9-4.9a2.9 2.9 0 0 1 5.8 0c0 1.2-1 2.8-2.9 4.9z"/><circle cx="19" cy="6.3" r=".7"/></svg></span>
+                <span class="why-card__num" aria-hidden="true">02</span>
+              </div>
+              <h3 class="why-card__title">100% tailor-made trips</h3>
+              <p>Tell us your dates, budget and interests, and we build the route around you. Change it anytime.</p>
+            </li>
+            <li class="why-card reveal">
+              <div class="why-card__top">
+                <span class="why-card__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></svg></span>
+                <span class="why-card__num" aria-hidden="true">03</span>
+              </div>
+              <h3 class="why-card__title">No hidden costs</h3>
+              <p>Your quote shows exactly what's included: vehicle, fuel, driver, hotels and entrance fees.</p>
+            </li>
+            <li class="why-card reveal">
+              <div class="why-card__top">
+                <span class="why-card__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2 5.2-5.2 2 2-5.2z"/><path d="M12 3v1.6M12 19.4V21M3 12h1.6M19.4 12H21"/></svg></span>
+                <span class="why-card__num" aria-hidden="true">04</span>
+              </div>
+              <h3 class="why-card__title">Local knowledge</h3>
+              <p>The best times to beat the crowds, the safest safari jeeps, and where locals actually eat.</p>
+            </li>
+            <li class="why-card reveal">
+              <div class="why-card__top">
+                <span class="why-card__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 15.5a2 2 0 0 1-2 2H9l-4.5 3.5V5.5a2 2 0 0 1 2-2H18a2 2 0 0 1 2 2z"/><path d="M12.2 7.5v3.6l2.3 1.4"/></svg></span>
+                <span class="why-card__num" aria-hidden="true">05</span>
+              </div>
+              <h3 class="why-card__title">24/7 WhatsApp support</h3>
+              <p>We're one message away, from airport pickup to the final goodbye.</p>
+            </li>
+            <li class="why-card reveal">
+              <div class="why-card__top">
+                <span class="why-card__tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="1.5"/><path d="M3 10h18M16 14.5h2"/><path d="M6 6V4.5h12V6"/></svg></span>
+                <span class="why-card__num" aria-hidden="true">06</span>
+              </div>
+              <h3 class="why-card__title">Flexible payments</h3>
+              <p>A small deposit secures your trip, and the balance is paid on arrival.</p>
+            </li>
+          </ol>
+        </div>
+
+        <p class="why__note reveal"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg>We also arrange island-wide tours and pickups from Bandaranaike International Airport (BIA).</p>
+      </div>
+    </section>
+
+    <!-- ===== Cinematic interlude ===== -->
+    <section class="interlude" aria-label="Nine Arches Bridge, Ella">
+      <figure class="interlude__media">
+        <img src="assets/images/interlude-nine-arches.jpg" alt="A blue and red train crossing the stone Nine Arches Bridge through thick green jungle near Ella" width="2400" height="1030" loading="lazy">
+      </figure>
+      <div class="interlude__scrim" aria-hidden="true"></div>
+      <div class="interlude__content">
+        <p class="interlude__line reveal">Tell us what you love. <em>We'll draw the route.</em></p>
+        <p class="interlude__caption">Nine Arches Bridge, Ella</p>
+      </div>
+    </section>
+
+
+    <!-- ===== 4. Key numbers ===== -->
+    <section class="numbers" aria-label="Lanka Wanderways in numbers">
+      <div class="container">
+        <dl class="numbers__list">
+          <div class="numbers__item reveal">
+            <dt class="numbers__label">Years in tourism</dt>
+            <dd class="numbers__figure" data-count>8+</dd>
+          </div>
+          <div class="numbers__item reveal">
+            <dt class="numbers__label">Happy travellers</dt>
+            <dd class="numbers__figure" data-count>1,200+</dd>
+          </div>
+          <div class="numbers__item reveal">
+            <dt class="numbers__label">Average reply</dt>
+            <dd class="numbers__figure"><span class="numbers__prefix">under</span> 1 hr</dd>
+          </div>
+        </dl>
+        <p class="demo-note numbers__note">Demo figures.</p>
+      </div>
+    </section>
+
+    <!-- ===== 4b. Reviews ===== -->
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="reviews__stage">
+        <figure class="reviews__bg" aria-hidden="true">
+          <img src="assets/images/reviews-south-coast-dusk.jpg" alt="" width="2400" height="1350" loading="lazy">
+        </figure>
+        <div class="reviews__scrim" aria-hidden="true"></div>
+
+        <div class="container reviews__inner">
+          <p class="eyebrow eyebrow--light reveal">Reviews</p>
+          <h2 class="section-title section-title--light reveal" id="reviews-title">What travellers <em>tell us.</em></h2>
+
+          <div class="slider" data-slider aria-roledescription="carousel" aria-label="Traveller reviews">
+            <div class="slider__viewport" aria-live="polite">
+              <figure class="review is-active" aria-roledescription="slide" aria-label="1 of 3">
+                <p class="review__stars" aria-label="5 out of 5 stars">★★★★★</p>
+                <blockquote class="review__quote"><p>“Our driver was amazing, he knew every good spot and never rushed us. Ella was the highlight!!”</p></blockquote>
+                <figcaption class="review__author">Anna, Germany</figcaption>
+              </figure>
+              <figure class="review" aria-roledescription="slide" aria-label="2 of 3" hidden>
+                <p class="review__stars" aria-label="5 out of 5 stars">★★★★★</p>
+                <blockquote class="review__quote"><p>“Honeymoon trip planned perfectly. Hotels were even better than photos. thank you Lanka Wanderways team”</p></blockquote>
+                <figcaption class="review__author">James &amp; Emily, UK</figcaption>
+              </figure>
+              <figure class="review" aria-roledescription="slide" aria-label="3 of 3" hidden>
+                <p class="review__stars" aria-label="5 out of 5 stars">★★★★★</p>
+                <blockquote class="review__quote"><p>“We changed our plan twice during the trip and they sorted it in minutes on whatsapp. Highly recommend.”</p></blockquote>
+                <figcaption class="review__author">Sanne, Netherlands</figcaption>
+              </figure>
+            </div>
+
+            <div class="slider__controls">
+              <button class="icon-button" type="button" data-slider-prev aria-label="Previous review">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6"/></svg>
+              </button>
+              <p class="slider__count" aria-hidden="true"><span data-slider-current>01</span> / 03</p>
+              <button class="icon-button" type="button" data-slider-next aria-label="Next review">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+              </button>
+              <button class="icon-button slider__toggle" type="button" data-slider-toggle aria-label="Pause reviews" hidden>
+                <svg class="slider__icon-pause" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></svg>
+                <svg class="slider__icon-play" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <p class="demo-note demo-note--light">Example testimonials shown for demo purposes.</p>
+        </div>
+      </div>
+
+      <div class="story container">
+        <figure class="story__media reveal">
+          <img src="assets/images/story-taxi-night.jpg" alt="A taxi with its roof sign lit, waiting on a street at night" width="1400" height="1000" loading="lazy">
+        </figure>
+        <div class="story__card reveal">
+          <p class="eyebrow">When plans change</p>
+          <h3 class="story__title">Eight hours late. <em>Not a day lost.</em></h3>
+          <p>A family of five's flight landed 8 hours late. Our driver waited at the airport, we moved their first hotel night, and they didn't miss a single day of their tour.</p>
+          <p class="demo-note">Example story for demo purposes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. FAQ ===== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="faq__main">
+          <div class="faq__head">
+            <p class="chip reveal">FAQ</p>
+            <h2 class="section-title reveal" id="faq-title">Good questions, <em>straight answers.</em></h2>
+          </div>
+
+          <div class="accordion" data-accordion>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">
+                  <span class="accordion__num" aria-hidden="true">01</span><span class="accordion__question">Is Sri Lanka safe to travel right now?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
+                <p>Yes. Most visits to Sri Lanka are easy and trouble-free, and people are warm and welcoming. Use normal travel sense: watch your bags in busy places and only swim where locals say it's safe. Your driver-guide is with you for the whole trip, and we're one WhatsApp message away, 24/7. Before you travel, check your government's latest travel advice.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
+                  <span class="accordion__num" aria-hidden="true">02</span><span class="accordion__question">What's included in the price?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
+                <p>Private vehicle, fuel, your English-speaking driver-guide, hotels as listed and entrance fees shown in your quote. Flights and personal expenses are not included.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
+                  <span class="accordion__num" aria-hidden="true">03</span><span class="accordion__question">How much deposit is needed, and how do I pay?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
+                <p>A small deposit secures your trip and the balance is paid on arrival. Your quote shows the exact deposit and how to pay it, before you commit to anything. Cancellation is free up to 30 days before arrival.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
+                  <span class="accordion__num" aria-hidden="true">04</span><span class="accordion__question">Does the driver speak English?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
+                <p>Yes, all our driver-guides speak English.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">
+                  <span class="accordion__num" aria-hidden="true">05</span><span class="accordion__question">When is the best time to visit?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-5-btn" hidden>
+                <p>Sri Lanka has two monsoons, so there's a good region to visit all year. Tell us your dates and we'll plan the route around the weather.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">
+                  <span class="accordion__num" aria-hidden="true">06</span><span class="accordion__question">Can we change the plan during the trip?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-6" role="region" aria-labelledby="faq-6-btn" hidden>
+                <p>Yes, just message us on WhatsApp.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="faq-7" id="faq-7-btn">
+                  <span class="accordion__num" aria-hidden="true">07</span><span class="accordion__question">Do we need a visa (ETA)?</span><span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion__panel" id="faq-7" role="region" aria-labelledby="faq-7-btn" hidden>
+                <p>Most visitors need an Electronic Travel Authorisation (ETA) before arrival. Check the rules for your nationality and apply on the official site, <a href="https://www.eta.gov.lk" target="_blank" rel="noopener">eta.gov.lk</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="faq__ask reveal" aria-label="Ask us on WhatsApp">
+          <figure class="faq__ask-media">
+            <img src="assets/images/place-galle-street.jpg" alt="A quiet street in Galle Fort under a pink and purple sunset sky" width="1600" height="1000" loading="lazy">
+          </figure>
+          <div class="faq__ask-body">
+            <p class="chip chip--glass"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3.6 20.4l1.3-4.1a8.6 8.6 0 1 1 3.1 2.9z"/><path d="M9 8.3c.2-.4.6-.5.9-.5h.4c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .5-.1.6l-.6.7c.6 1.2 1.6 2.2 2.8 2.8l.7-.6c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.4c0 .4-.2.7-.5.9-.6.4-1.4.5-2.1.3-2.6-.8-4.6-2.8-5.4-5.4-.2-.7-.1-1.5.3-2.1z"/></svg>WhatsApp</p>
+            <p class="faq__ask-title">Can't find yours? <em>Ask us on WhatsApp, any time.</em></p>
+            <a class="button button--spice" href="https://wa.me/94729879869" target="_blank" rel="noopener">Message us on WhatsApp<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== 6. Free sample itinerary ===== -->
+    <section class="itinerary" id="itinerary" aria-labelledby="itinerary-title">
+      <figure class="itinerary__media">
+        <img src="assets/images/itinerary-sea-of-clouds.jpg" alt="Layers of mountain ridges above a sea of clouds at dawn" width="1600" height="1200" loading="lazy">
+      </figure>
+      <div class="itinerary__panel">
+        <p class="eyebrow reveal">Free download</p>
+        <h2 class="section-title reveal" id="itinerary-title">Not ready <em>to book?</em></h2>
+        <p class="lead reveal">Download our free 10-Day Sri Lanka Sample Itinerary.</p>
+        <div class="itinerary__actions reveal">
+          <a class="button button--spice" href="assets/docs/lanka-wanderways-10-day-sample-itinerary.pdf" download>Download the PDF<span class="button__arrow button__arrow--down" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v13M6.5 12.5L12 18l5.5-5.5"/></svg></span></a>
+          <a class="button button--outline-light" href="https://wa.me/94729879869?text=Hi!%20Please%20send%20me%20the%20free%2010-day%20sample%20itinerary." target="_blank" rel="noopener">Send it on WhatsApp<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></a>
+        </div>
+        <p class="itinerary__meta reveal">Free PDF · 2 pages · No sign-up needed</p>
+      </div>
+    </section>
+
+    <!-- ===== 7. Inquiry form ===== -->
+    <section class="section plan" id="plan" aria-labelledby="plan-title">
+      <div class="container">
+        <header class="plan__head">
+          <p class="chip reveal">Plan your trip</p>
+          <h2 class="section-title reveal" id="plan-title">Plan Your Trip</h2>
+          <p class="lead reveal">Tell us a little about your trip. We'll send you a free itinerary to look over, with no obligation.</p>
+        </header>
+
+        <div class="plan__grid">
+          <form class="trip-form" action="https://wa.me/94729879869" method="get" target="_blank" data-trip-form data-subject="New trip enquiry — Lanka Wanderways" novalidate>
+            <!-- No form service yet: main.js turns the details into a WhatsApp message, with an email link as a backup.
+                 To use Formspree later, set action="https://formspree.io/f/YOUR-ID" method="POST" and post the form with fetch instead. -->
+
+            <div class="field">
+              <label class="field__label" for="f-name">Your Name <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-email">Email Address <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-country">Country of Residence</label>
+              <select class="field__input" id="f-country" name="country" autocomplete="country-name">
+                <option value="">Select your country</option>
+                <optgroup label="Europe">
+                  <option>Austria</option><option>Belgium</option><option>Croatia</option><option>Czechia</option>
+                  <option>Denmark</option><option>Estonia</option><option>Finland</option><option>France</option>
+                  <option>Germany</option><option>Greece</option><option>Hungary</option><option>Iceland</option>
+                  <option>Ireland</option><option>Italy</option><option>Latvia</option><option>Lithuania</option>
+                  <option>Luxembourg</option><option>Netherlands</option><option>Norway</option><option>Poland</option>
+                  <option>Portugal</option><option>Romania</option><option>Slovakia</option><option>Slovenia</option>
+                  <option>Spain</option><option>Sweden</option><option>Switzerland</option><option>United Kingdom</option>
+                </optgroup>
+                <optgroup label="Rest of the world">
+                  <option>Australia</option><option>Canada</option><option>China</option><option>India</option>
+                  <option>Israel</option><option>Japan</option><option>New Zealand</option><option>Singapore</option>
+                  <option>South Africa</option><option>United Arab Emirates</option><option>United States</option>
+                  <option>Other</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-phone">WhatsApp / Phone <span class="field__opt">(optional)</span></label>
+              <input class="field__input" id="f-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field field--half">
+              <label class="field__label" for="f-adults">Adults</label>
+              <select class="field__input" id="f-adults" name="adults">
+                <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+              </select>
+            </div>
+            <div class="field field--half">
+              <label class="field__label" for="f-children">Children</label>
+              <select class="field__input" id="f-children" name="children">
+                <option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+              </select>
+            </div>
+            <div class="field field--half">
+              <label class="field__label" for="f-arrival">Arrival Date</label>
+              <input class="field__input" id="f-arrival" name="arrival_date" type="date" data-arrival>
+            </div>
+            <div class="field field--half">
+              <label class="field__label" for="f-departure">Departure Date</label>
+              <input class="field__input" id="f-departure" name="departure_date" type="date" data-departure>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-type">Trip Type</label>
+              <select class="field__input" id="f-type" name="trip_type">
+                <option value="">Select a trip type</option>
+                <option>Round Tour</option><option>Honeymoon</option><option>Wildlife Safari</option>
+                <option>Beach Holiday</option><option>Adventure</option><option>Hiking</option>
+                <option>Kitesurfing</option><option>Day Tour</option><option>Airport Transfer</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-package">Package of interest</label>
+              <select class="field__input" id="f-package" name="package" data-package-select>
+                <option value="">Select a package</option>
+                <option value="sri-lanka-highlights">Sri Lanka Highlights</option>
+                <option value="southern-beaches-escape">Southern Beaches Escape</option>
+                <option value="tea-country-trails">Tea Country Trails</option>
+                <option value="ella-hill-country">Ella &amp; Hill Country</option>
+                <option value="wildlife-safari-adventure">Wildlife Safari Adventure</option>
+                <option value="adventure-sri-lanka">Adventure Sri Lanka</option>
+                <option value="hiking-trekking">Hiking &amp; Trekking</option>
+                <option value="kitesurfing-kalpitiya">Kitesurfing in Kalpitiya</option>
+                <option value="cultural-triangle-heritage">Cultural Triangle Heritage</option>
+                <option value="honeymoon-escape">Honeymoon Escape</option>
+                <option value="custom">Custom trip</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="f-notes">Special Notes or Requests <span class="field__opt">(optional)</span></label>
+              <textarea class="field__input field__input--area" id="f-notes" name="notes" rows="4"></textarea>
+            </div>
+
+            <div class="trip-form__submit field--full">
+              <button class="button button--spice" type="submit">Get My Free Itinerary<span class="button__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg></span></button>
+              <p class="trip-form__promise">We reply within 24 hours. No booking fee, no obligation.</p>
+              <p class="form-status" role="status" data-form-status></p>
+              <p class="trip-form__note">Sending opens WhatsApp with your details ready to go. No WhatsApp? Email <a href="mailto:hello@lankawanderways.com">hello@lankawanderways.com</a>.</p>
+            </div>
+          </form>
+
+          <aside class="plan__aside" id="contact" aria-labelledby="contact-title">
+            <div class="contact-card">
+              <div class="contact-card__head">
+                <span class="contact-card__tile"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4.5h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 4.4 4.4l1.3-2 4 1.6V17a2 2 0 0 1-2.2 2A14.5 14.5 0 0 1 3 6.7 2 2 0 0 1 5 4.5z"/></svg></span>
+                <h3 class="contact-card__title" id="contact-title">Contact us</h3>
+              </div>
+              <p class="chip chip--status">24/7 WhatsApp support while you travel</p>
+              <ul class="contact-list">
+                <li>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4.5h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 4.4 4.4l1.3-2 4 1.6V17a2 2 0 0 1-2.2 2A14.5 14.5 0 0 1 3 6.7 2 2 0 0 1 5 4.5z"/></svg>
+                  <div><span class="contact-list__label">Phone / WhatsApp</span><a href="https://wa.me/94729879869" target="_blank" rel="noopener">+94 72 987 9869</a></div>
+                </li>
+                <li>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+                  <div><span class="contact-list__label">Email</span><a href="mailto:hello@lankawanderways.com">hello@lankawanderways.com</a></div>
+                </li>
+                <li>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg>
+                  <div><span class="contact-list__label">Address</span><span>No. 15, Colombo Road, Lake Road, Sri Lanka</span></div>
+                </li>
+                <li>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+                  <div><span class="contact-list__label">Hours</span><span>8:00am – 8:00pm, daily</span></div>
+                </li>
+              </ul>
+              <div class="contact-card__actions">
+                <a class="button button--ocean button--sm button--icon" href="https://wa.me/94729879869" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3.6 20.4l1.3-4.1a8.6 8.6 0 1 1 3.1 2.9z"/><path d="M9 8.3c.2-.4.6-.5.9-.5h.4c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .5-.1.6l-.6.7c.6 1.2 1.6 2.2 2.8 2.8l.7-.6c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.4c0 .4-.2.7-.5.9-.6.4-1.4.5-2.1.3-2.6-.8-4.6-2.8-5.4-5.4-.2-.7-.1-1.5.3-2.1z"/></svg>WhatsApp</a>
+                <a class="button button--outline button--sm button--icon" href="mailto:hello@lankawanderways.com"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>Email us</a>
+              </div>
+            </div>
+            <figure class="plan__photo">
+              <img src="assets/images/plan-galle-ramparts.jpg" alt="People watching the sunset from the grassy ramparts of Galle Fort" width="1200" height="1500" loading="lazy">
+              <figcaption class="chip chip--glass"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg>Galle Fort</figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 8. Footer ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="logo logo--light" href="#top">Lanka Wanderways</a>
+        <p class="site-footer__tagline">Private Sri Lanka tours, planned by locals.</p>
+        <ul class="social" aria-label="Contact us">
+          <li><a href="https://wa.me/94729879869" target="_blank" rel="noopener" aria-label="WhatsApp us on +94 72 987 9869"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3.6 20.4l1.3-4.1a8.6 8.6 0 1 1 3.1 2.9z"/><path d="M9 8.3c.2-.4.6-.5.9-.5h.4c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .5-.1.6l-.6.7c.6 1.2 1.6 2.2 2.8 2.8l.7-.6c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.4c0 .4-.2.7-.5.9-.6.4-1.4.5-2.1.3-2.6-.8-4.6-2.8-5.4-5.4-.2-.7-.1-1.5.3-2.1z"/></svg></a></li>
+          <li><a href="mailto:hello@lankawanderways.com" aria-label="Email hello@lankawanderways.com"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg></a></li>
+          <li><a href="tel:+94729879869" aria-label="Call +94 72 987 9869"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.8 3.5H5a1.5 1.5 0 0 0-1.5 1.6c.6 8 7.3 14.7 15.3 15.3a1.5 1.5 0 0 0 1.6-1.5v-1.8a1 1 0 0 0-.7-1l-3-1a1 1 0 0 0-1 .2l-1.4 1.4a12 12 0 0 1-5.2-5.2l1.4-1.4a1 1 0 0 0 .2-1l-1-3a1 1 0 0 0-1-.7z"/></svg></a></li>
+          <!-- Facebook / Instagram / TripAdvisor: add these back once the page links are ready.
+          <li><a href="FACEBOOK-URL" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14.5 8.5V6.8c0-.8.5-1.3 1.3-1.3h1.7V2.5h-2.6c-2.4 0-3.9 1.6-3.9 4v2H8.5v3H11v10h3.5v-10h2.6l.4-3z"/></svg></a></li>
+          <li><a href="INSTAGRAM-URL" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></svg></a></li>
+          <li><a href="TRIPADVISOR-URL" target="_blank" rel="noopener" aria-label="TripAdvisor"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="7" cy="13.5" r="3.6"/><circle cx="17" cy="13.5" r="3.6"/><circle cx="7" cy="13.5" r="1"/><circle cx="17" cy="13.5" r="1"/><path d="M2.5 8.5h3.2c3.9-2.4 8.7-2.4 12.6 0h3.2M12 17.6l-1.4-1.9M12 17.6l1.4-1.9"/></svg></a></li>
+          -->
+        </ul>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Quick links">
+        <p class="site-footer__heading">Explore</p>
+        <ul>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#plan">Plan My Trip</a></li>
+          <li><a href="sri-lanka-highlights.html">Sri Lanka Highlights</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Contact</p>
+        <ul>
+          <li><a href="https://wa.me/94729879869" target="_blank" rel="noopener">+94 72 987 9869</a></li>
+          <li><a href="mailto:hello@lankawanderways.com">hello@lankawanderways.com</a></li>
+          <li>No. 15, Colombo Road, Lake Road, Sri Lanka</li>
+          <li>8:00am – 8:00pm, daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__base">
+      <p>&copy; <span data-year>2026</span> Lanka Wanderways. All rights reserved.</p>
+      <p><a href="assets/images/CREDITS.md">Photography: Unsplash contributors</a></p>
+      <p class="site-footer__credit">Design &amp; Developed by <strong>361DigitalLabs</strong></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

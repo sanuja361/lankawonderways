@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Lanka Wanderways — design tokens for the Lumen-style home page
+   (index-lumen.html). Same brand palette as tokens.css.
+   ========================================================================== */
+
+:root {
+  --coconut:#FFFDF8;
+  --sand:#F7EDDC;
+  --ebony:#1E2A2F;
+  --ocean:#0B4F6C;
+  --ocean-deep:#083A50;
+  --spice:#F2A541;
+  --spice-deep:#E08F22;
+  --tea:#2E8B57;
+  --tea-ink:#1F6B43;
+  --ink-soft:#4B575C;
+  --ink-mute:#6B7578;
+  --line:rgba(30,42,47,.12);
+  --line-strong:rgba(30,42,47,.28);
+  --ph-bg:#FFF1D6;
+  --ph-line:#C77A12;
+  --error:#A3341F;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
